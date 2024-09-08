@@ -1,4 +1,7 @@
 /* Add this to the Tailwind setup */
+body {
+  background-color: rgb(246, 248, 250);
+}
 .input {
   width: 100%;
   padding: 0.5rem;
@@ -16,4 +19,7 @@
 
 .btn:hover {
   background-color: #2d3748;
+}
+.MuiInputBase-colorSecondary {
+  border-radius: 12px !important;
 }
