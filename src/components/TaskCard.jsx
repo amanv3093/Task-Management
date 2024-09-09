@@ -44,20 +44,41 @@ const TaskCard = ({ task }) => {
         </>
       ) : (
         <>
-          <h3 className="font-bold text-lg">{task.title}</h3>
-          <p>{task.description}</p>
-          <p className="text-sm">Due: {task.dueDate}</p>
-          <p>Status: {task.completed ? "Completed" : "Incomplete"}</p>
-          <div className="flex justify-between mt-2">
-            <button onClick={() => toggleComplete(task.id)} className="btn">
-              Toggle Complete
-            </button>
-            <button onClick={() => setIsEditing(true)} className="btn">
-              Edit
-            </button>
-            <button onClick={() => deleteTask(task.id)} className="btn">
-              Delete
-            </button>
+          <div className="task-container p-6 bg-white shadow-lg rounded-lg border border-gray-200 max-w-sm mx-auto">
+            <h3 className="font-bold text-xl text-gray-800 mb-2 break-words">
+              {task.title}
+            </h3>
+            <p className="text-gray-600 mb-2 break-words">
+              <span className="font-semibold">Description:</span>{" "}
+              {task.description}
+            </p>
+            <p className="text-sm text-gray-500 mb-2">
+              <span className="font-semibold">Due:</span> {task.dueDate}
+            </p>
+            <p className="text-sm text-gray-500 mb-4">
+              <span className="font-semibold">Status:</span>{" "}
+              {task.completed ? "Completed" : "Incomplete"}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => toggleComplete(task.id)}
+                className="btn bg-blue-500 text-white hover:bg-blue-600"
+              >
+                Toggle Complete
+              </button>
+              <button
+                onClick={() => setIsEditing(true)}
+                className="btn bg-yellow-500 text-white hover:bg-yellow-600"
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => deleteTask(task.id)}
+                className="btn bg-red-500 text-white hover:bg-red-600"
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </>
       )}

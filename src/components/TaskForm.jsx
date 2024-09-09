@@ -95,7 +95,7 @@ const TaskForm = () => {
           </div>
           <button
             type="submit"
-            className="btn w-full p-[18px] text-[22px] font-extrabold rounded-[30px] bg-[#9c27b0]"
+            className="btn w-full p-[18px] text-[22px] font-extrabold rounded-[30px] bg-[#9d62f3]"
           >
             Add Task
           </button>

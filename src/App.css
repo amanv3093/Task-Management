@@ -11,15 +11,16 @@
 /*  */
 .btn {
   padding: 0.5rem 1rem;
-  background-color: #4a5568;
+  background-color: #9d62f3;
   color: white;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #2d3748;
-}
+/* .btn:hover {
+  background-color: white;
+  color: black;
+} */
 .MuiInputBase-colorSecondary {
   border-radius: 12px !important;
 }
@@ -33,9 +34,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #9c27b0;
+  background: #9d62f3;
 }
 
+.css-1n0g3s8-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #9d62f3 !important;
+}
+.css-1vdr0m9-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline,
+.css-xtv1tp-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #9d62f3 !important;
+}
 .AddButton {
   font-weight: 500;
   min-width: 64px;
@@ -43,8 +53,8 @@
   cursor: pointer;
   position: fixed;
   bottom: 40px;
-  width: 72px;
-  height: 72px;
+  width: 60px;
+  height: 64px;
   border-radius: 100%;
   color: rgb(240, 240, 240);
   right: 16vw;

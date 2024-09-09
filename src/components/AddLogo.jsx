@@ -5,7 +5,7 @@ function AddLogo() {
     <div className="mb-4">
       <span className="relative inline-block">
         <div
-          className="flex items-center justify-center w-24 h-24 rounded-full bg-[#b624ff]"
+          className="flex items-center justify-center w-24 h-24 rounded-full bg-[#9d62f3]"
           // style="background-color: #b624ff"
         >
           <svg
