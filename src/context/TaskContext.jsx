@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const TaskContext = createContext();
 
@@ -6,7 +7,9 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "rgb(246, 248, 250)"
+  );
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -18,12 +21,22 @@ export const TaskProvider = ({ children }) => {
   }, [tasks]);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    // document.documentElement.classList.toggle("dark", theme === "dark");
+    console.log(theme);
+
+    if (theme === "light") {
+      document.body.style.background = "rgb(246, 248, 250)";
+    } else {
+      document.body.style.background = "black";
+    }
+
     localStorage.setItem("theme", theme);
   }, [theme]);
-
+  let navigate = useNavigate();
   const addTask = (task) => {
     setTasks([...tasks, { ...task, id: Date.now(), completed: false }]);
+
+    navigate("/TaskListPage");
   };
 
   const editTask = (updatedTask) => {
