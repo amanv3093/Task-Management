@@ -12,7 +12,7 @@ const TaskCard = ({ task }) => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-md shadow-md">
+    <div className="border border-gray-50 dark:bg-gray-800 p-4 rounded-md shadow-md">
       {isEditing ? (
         <>
           <input
@@ -44,7 +44,7 @@ const TaskCard = ({ task }) => {
         </>
       ) : (
         <>
-          <div className="task-container p-6 bg-white shadow-lg rounded-lg border border-gray-200 max-w-sm mx-auto">
+          <div className="task-container p-6  shadow-lg rounded-lg  w-[90%] mx-auto">
             <h3 className="font-bold text-xl text-gray-800 mb-2 break-words">
               {task.title}
             </h3>
@@ -64,7 +64,7 @@ const TaskCard = ({ task }) => {
                 onClick={() => toggleComplete(task.id)}
                 className="btn bg-blue-500 text-white hover:bg-blue-600"
               >
-                Toggle Complete
+                Toggle {task.completed ? "InCompleted" : "Completed"}
               </button>
               <button
                 onClick={() => setIsEditing(true)}

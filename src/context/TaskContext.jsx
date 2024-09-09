@@ -10,6 +10,7 @@ export const TaskProvider = ({ children }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") || "rgb(246, 248, 250)"
   );
+  console.log(tasks);
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
