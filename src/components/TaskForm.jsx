@@ -35,11 +35,11 @@ const TaskForm = () => {
   };
 
   return (
-    <div className="min-h-screen dark:bg-gray-900 text-gray-900 dark:text-gray-100 md:mb-0 mb-14">
+    <div className="min-h-screen  text-gray-900 dark:text-gray-100 md:mb-0 mb-8">
       <div className="max-w-[28rem] mx-auto p-4">
         <form
           onSubmit={handleSubmit}
-          className=" dark:bg-gray-800 p-4 rounded-md flex items-center justify-center flex-col"
+          className="  p-4 rounded-md flex items-center justify-center flex-col"
         >
           <h2
             className="text-2xl font-bold mb-4"
