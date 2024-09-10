@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import TaskContext from "../context/TaskContext";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import { TextField } from "@mui/material";
+
 import AddLogo from "./AddLogo";
 import "../App.css";
 const TaskForm = () => {
@@ -93,14 +93,22 @@ const TaskForm = () => {
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
               className="input rounded-xl"
-              style={{ color: theme === "dark" ? "white" : "black" }}
+              InputProps={{
+                inputProps: {
+                  style: { color: theme === "dark" ? "white" : "black" },
+                },
+              }}
               sx={{
-                "& .MuiOutlinedInput-input": {
+                "& input::-webkit-calendar-picker-indicator": {
+                  filter: theme === "dark" ? "invert(1)" : "none",
+                },
+                "& input[type='date']": {
                   color: theme === "dark" ? "white" : "black",
                 },
               }}
             />
           </div>
+
           <button
             type="submit"
             className="btn w-full p-[18px] text-[22px] font-extrabold rounded-[30px] bg-[#9d62f3]"
