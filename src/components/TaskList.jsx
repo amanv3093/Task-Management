@@ -3,12 +3,15 @@ import TaskCard from "./TaskCard";
 import TaskContext from "../context/TaskContext";
 
 const TaskList = () => {
-  const { filteredTasks } = useContext(TaskContext);
+  const { filteredTasks, theme } = useContext(TaskContext);
   console.log(filteredTasks);
 
   if (filteredTasks.length === 0) {
     return (
-      <p className="text-center md:text-4xl text-2xl md:pt-[8rem] pt-16">
+      <p
+        className="text-center md:text-4xl text-2xl md:pt-[8rem] pt-24"
+        style={{ color: theme === "dark" ? "white" : "black" }}
+      >
         No tasks found :)
       </p>
     );
