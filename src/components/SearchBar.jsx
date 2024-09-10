@@ -22,7 +22,7 @@ const SearchBar = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           required
-          className="w-full bg-transparent outline-none w-full placeholder-gray-400 dark:placeholder-gray-400 text-purple-500 pl-3"
+          className="bg-transparent outline-none w-full placeholder-gray-400 dark:placeholder-gray-400 text-purple-500 pl-3"
         />
       </div>
     </div>
