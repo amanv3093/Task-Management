@@ -10,7 +10,7 @@ import TaskContext from "../context/TaskContext";
 function TaskListPage() {
   const { tasks } = useContext(TaskContext);
   return (
-    <div className="min-h-screen dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen">
       <div className="max-w-[35rem] mx-auto p-4 ">
         {tasks.length === 0 ? (
           <TaskList />

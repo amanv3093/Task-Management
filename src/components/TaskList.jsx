@@ -8,10 +8,7 @@ const TaskList = () => {
 
   if (filteredTasks.length === 0) {
     return (
-      <p
-        className="text-center md:text-4xl text-2xl flex items-center justify-center md:pb-20 pb:0"
-        style={{ height: "calc(100vh - 78px - 68px)" }}
-      >
+      <p className="text-center md:text-4xl text-2xl md:pt-[8rem] pt-16">
         No tasks found :)
       </p>
     );

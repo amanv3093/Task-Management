@@ -35,7 +35,7 @@ function Footer() {
           <span className="material-symbols-outlined text-white">add</span>
         </button>
       </NavLink>
-      <a href="https://github.com/amanv3093">
+      <a href="https://github.com/amanv3093" target="_blank">
         <i className="fa-brands fa-github text-[#9d62f3] text-2xl"></i>
       </a>
     </footer>
