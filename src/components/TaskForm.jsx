@@ -20,7 +20,6 @@ const TaskForm = () => {
     const selectedDate = new Date(dueDate);
     const today = new Date();
 
-    // Remove the time portion from the dates by setting hours to 0
     today.setHours(0, 0, 0, 0);
     selectedDate.setHours(0, 0, 0, 0);
 
