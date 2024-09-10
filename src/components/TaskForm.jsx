@@ -34,11 +34,12 @@ const TaskForm = () => {
   };
 
   return (
-    <div className="min-h-screen  text-gray-900 dark:text-gray-100 md:mb-0 mb-8">
+    <div className="min-h-screen md:mb-0 mb-8">
       <div className="max-w-[28rem] mx-auto p-4">
         <form
           onSubmit={handleSubmit}
           className="  p-4 rounded-md flex items-center justify-center flex-col"
+          style={{ color: theme === "dark" ? "white" : "black" }}
         >
           <h2
             className="text-2xl font-bold mb-4"
@@ -56,6 +57,7 @@ const TaskForm = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="input rounded-xl"
+              style={{ color: theme === "dark" ? "white" : "black" }}
               sx={{
                 "& .MuiOutlinedInput-input": {
                   color: theme === "dark" ? "white" : "black",
@@ -72,6 +74,7 @@ const TaskForm = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               className="input rounded-xl"
+              style={{ color: theme === "dark" ? "white" : "black" }}
               rows="5"
               multiline
               sx={{
@@ -90,6 +93,7 @@ const TaskForm = () => {
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
               className="input rounded-xl"
+              style={{ color: theme === "dark" ? "white" : "black" }}
               sx={{
                 "& .MuiOutlinedInput-input": {
                   color: theme === "dark" ? "white" : "black",

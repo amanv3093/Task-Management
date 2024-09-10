@@ -12,7 +12,7 @@ const TaskCard = ({ task }) => {
   };
 
   return (
-    <div className="border border-gray-50 dark:bg-gray-800 p-4 rounded-md shadow-md">
+    <div className="border border-gray-50  p-4 rounded-md shadow-md">
       {isEditing ? (
         <>
           <input
